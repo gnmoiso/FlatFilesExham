@@ -18,6 +18,7 @@ public class NugetCsvHelper
         cw.WriteRecords(people);
     }
 
+
     public IEnumerable<Person> Read(string path)
     {
         using var sr = new StreamReader(path);
