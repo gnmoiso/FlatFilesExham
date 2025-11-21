@@ -2,6 +2,7 @@
 
 var helper = new NugetCsvHelper();
 Console.WriteLine("Iniciando aplicación de ejemplo de Archivos Planos...");
+var countSeccion = 0;
 var listUser = "Users.csv".ToList(); // añadir inicio de seccion maximo 3 intentos
 
 Console.WriteLine("Escriba el nombre de la lista de personas a crear (por defecto 'people.csv'):");
@@ -12,6 +13,12 @@ if (string.IsNullOrWhiteSpace(listName))
 }
 
 var options = string.Empty;
+
+do
+{
+
+    countSeccion++;
+} while (countSeccion <= 3);
 
 do
 {
@@ -48,6 +55,10 @@ do
                 people.Add(person);
                 helper.Write(listName, people);
                 Console.WriteLine("Persona agregada exitosamente.");
+                break;
+            }
+        case "3":
+            {
                 break;
             }
     }
