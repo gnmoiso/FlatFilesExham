@@ -8,8 +8,19 @@ namespace FlatFilesExham.Core;
 
 public class Person
 {
-    public string Name { get ; set; } = string.Empty;
-    public string Phone { get; set; } = string.Empty;
-    public string City { get; set; } = string.Empty;
+    public int Id { get; set; }
+    public string Name { get; set; }
+    public string Phone { get; set; }
+    public string City { get; set; }
     public decimal Balance { get; set; }
+
+    public Person()
+    {
+
+        Id = 0;
+        Name = "xx";
+        Phone = "xxx";
+        City = "xxx";
+        Balance = 0m;
+    }
 }

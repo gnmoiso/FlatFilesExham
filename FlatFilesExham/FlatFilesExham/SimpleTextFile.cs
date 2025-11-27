@@ -33,4 +33,9 @@ public class SimpleTextFile
     {
         return File.ReadAllLines(_Path);
     }
+
+    public void AppendLine(string line)
+    {
+        File.AppendAllText(_Path, line + Environment.NewLine);
+    }
 }
