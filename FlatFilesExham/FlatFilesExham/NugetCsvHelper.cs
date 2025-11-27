@@ -47,7 +47,7 @@ public class NugetCsvHelper
             return p;
         }).ToList();
 
-        // Asignar Ids enteros secuenciales para registros sin Id (Id <= 0)
+    
         var nextId = normalized.Any() ? normalized.Max(p => p.Id) : 0;
         foreach (var p in normalized)
         {
@@ -92,7 +92,7 @@ public class NugetCsvHelper
         using var cr = new CsvReader(sr, config);
         var records = cr.GetRecords<Person>().ToList();
 
-        // Asegurar Ids únicos para registros que vienen sin Id
+  
         var nextId = records.Any() ? records.Max(p => p.Id) : 0;
         foreach (var r in records)
         {
