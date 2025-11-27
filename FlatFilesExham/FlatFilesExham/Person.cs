@@ -18,7 +18,7 @@ public class Person
     {
 
         Id = 0;
-        Name = "xx";
+        Name = "xxx xx";
         Phone = "xxx";
         City = "xxx";
         Balance = 0m;
